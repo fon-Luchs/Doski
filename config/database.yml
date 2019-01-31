@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: Doski_development
+test:
+  <<: *default
+  database: Doski_test
+  
+production:
+  <<: *default
+  database: Doski_production
+  username: Doski
+  password: <%= ENV['DOSKI_DATABASE_PASSWORD'] %>
