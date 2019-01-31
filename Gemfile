@@ -12,6 +12,7 @@ gem 'draper'
 gem 'kaminari'
 gem 'email_validator'
 gem 'rails-observers'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
